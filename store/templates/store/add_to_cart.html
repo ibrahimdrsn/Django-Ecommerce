@@ -1,0 +1,11 @@
+
+<h1>Add to Cart</h1>
+
+<p>{{ product.name }} added to cart.</p>
+
+<h2>Enter Your Information</h2>
+<form method="post" action="{% url 'store:add_to_cart' product.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Complete Order</button>
+</form>

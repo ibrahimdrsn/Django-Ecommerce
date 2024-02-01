@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+    <div class= "container" style="width: 50%; padding: 10px;">
+        {%if user.is_authenticated%}
+            <h2>Your are logged in {{user.username}}</h2>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Log out</button>
+        {%else%}
+            <form method="POST" action="{% url 'login'%}">
+                {% csrf_token %}
+            {{form}}
+
+            <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        {%endif%}
+        </div>
+    </form>
+{% endblock %}

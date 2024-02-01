@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <img class="thumbnail img-fluid" src="{% static 'store/img-laptop-2.jpg' %}">
+            <div class="box-element product">
+                <h6><strong>Lenovo 16 inch Laptop</strong></h6>
+                <hr>
+
+                <a href="{% url 'store:add_to_cart' 1 %}">
+                    <button class="btn btn-outline-secondary add-btn">Buy Now</button>
+                </a>
+                <h4 style="display: inline-block"><strong>$520</strong></h4>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            <img class="thumbnail img-fluid" src="{% static 'store/img-laptop-3.jpg' %}">
+            <div class="box-element product">
+                <h6><strong>Lenovo 14 inch Laptop</strong></h6>
+                <hr>
+
+                <a href="{% url 'store:add_to_cart' 2 %}">
+                    <button class="btn btn-outline-secondary add-btn">Buy Now</button>
+                </a>
+                <h4 style="display: inline-block"><strong>$500</strong></h4>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            <img class="thumbnail img-fluid" src="{% static 'store/img-laptop-6.jpg' %}">
+            <div class="box-element product">
+                <h6><strong>HP 14 inch Laptop</strong></h6>
+                <hr>
+
+                <a href="{% url 'store:add_to_cart' 3 %}">
+                    <button class="btn btn-outline-secondary add-btn">Buy Now</button>
+                </a>
+                <h4 style="display: inline-block"><strong>$450</strong></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="center-content">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <img class="thumbnail img-fluid" src="{% static 'store/img-headphone-2.jpg' %}" width="300" height="233">
+                <div class="box-element product">
+                    <h6><strong>JBL Blue Heaphone</strong></h6>
+                    <hr>
+
+                    <a href="{% url 'store:add_to_cart' 4 %}">
+                        <button class="btn btn-outline-secondary add-btn">Buy Now</button>
+                    </a>
+                    <h4 style="display: inline-block"><strong>$20</strong></h4>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <img class="thumbnail img-fluid" src="{% static 'store/img-headphone-3.jpg' %}" width="300" height="233">
+                <div class="box-element product">
+                    <h6><strong>JBL Rose-Pink Headphone</strong></h6>
+                    <hr>
+
+                    <a href="{% url 'store:add_to_cart' 5 %}">
+                        <button class="btn btn-outline-secondary add-btn">Buy Now</button>
+                    </a>
+                    <h4 style="display: inline-block"><strong>$20</strong></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 mx-auto my-auto mb-4">
+            <img class="thumbnail img-fluid" src="{% static 'store/img-keyboard-2.jpg' %}">
+            <div class="box-element product text-center">
+                <h6><strong>Logitech Keyboard</strong></h6>
+                <hr>
+
+                <a href="{% url 'store:add_to_cart' 6 %}">
+                    <button class="btn btn-outline-secondary add-btn">Buy Now</button>
+                </a>
+                <h4 style="display: inline-block"><strong>$25</strong></h4>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

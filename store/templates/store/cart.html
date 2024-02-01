@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{%block content%}
+<form method="post" action="{% url 'store:pay_and_order' %}">
+    {% csrf_token %}
+    
+    <!-- Kullanıcı bilgileri için form alanları -->
+
+    <button type="submit">Pay & Order</button>
+</form>
+{%endblock%}
